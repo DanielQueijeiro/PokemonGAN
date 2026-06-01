@@ -18,7 +18,7 @@ En un entrenamiento ideal, el generador empieza produciendo imágenes claramente
 Para apoyarme en la creación y comprensión de mi modelo, usaré el artículo [Taming the Tail in Class-Conditional GANs: Knowledge Sharing via Unconditional Training at Lower Resolutions](https://openaccess.thecvf.com/content/CVPR2024/papers/Khorram_Taming_the_Tail_in_Class-Conditional_GANs_Knowledge_Sharing_via_Unconditional_CVPR_2024_paper.pdf) en el que se analiza a fondo cómo las GANs tienden a perder diversidad y calidad en las muestras cuando el dataset tiene clases muy específicas o distribuciones desbalanceadas (llamadas tail classes y por eso el nombre del artículo).
 
 ### Evaluación inicial del modelo
-Normalmente en un modelo de Deep Learning buscamos que la pérdida baje a cero, pero en una GAN si la pérdida de cualquiera de nuestros dos modelos aumenta significa que ha fracasado.
+Normalmente en un modelo de Deep Learning buscamos que la pérdida baje a cero, pero en una GAN si la pérdida de cualquiera de nuestros dos modelos llega a cero significa que ha fracasado.
 Al ser un entrenamiento "adversarial" entre el generador y discriminador, D_loss (la pérdida del discriminador) y G_loss (la pérdida del generador) representan qué tan balanceada está la competencia entre ambos modelos.
 
 Al terminar de ejecutar nuestro primer modelo obtenemos las siguientes métricas:
